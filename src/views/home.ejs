@@ -1,0 +1,11 @@
+<% if (message) { %>
+    <script type="text/javascript">alert('Вы зарегестрированы')</script> 
+<% }%>
+<% if (!user) { %>
+    <p>Главная</p> 
+    <p>Пожалуйста, <a href="/login"> авторизуйтесь </a></p>
+    <p>Пожалуйста, <a href="/signup"> зарегестрируйтесь </a></p>
+<% } else { %>
+    <p>Привет, <%= user.login %>. </p>
+    <p>Перейти в <a href="/profile">профиль</a>.</p>
+<% } %>
